@@ -17,7 +17,7 @@
 <label class='flex m-4'>
     <input 
     bind:value
-    type="radio"
+    type="checkbox"
     {disabled}
     {name}
     {label}
@@ -26,3 +26,4 @@
 />
     <span class="{disabledClass} text-2xl pl-2">{label}</span>
 </label>
+
