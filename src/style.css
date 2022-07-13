@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/*------ BUTTONS ---*/
+.contained{
+    @apply bg-gray-300 rounded-lg;
+ }
+ .containedprimary{
+    @apply text-white bg-blue-600 rounded-lg;
+ }
+ .containedsecondary{
+    @apply text-white bg-red-600 rounded-lg;
+ }
+ .default{
+    @apply text-black;
+ }
+ .primary{
+    @apply text-blue-600;
+ }
+ .secondary{
+    @apply text-red-600;
+ }
+ .outlined{
+    @apply border-2 rounded-lg;
+ }
+ .outlinedprimary{
+    @apply border-2 text-blue-600 border-blue-600 rounded-lg;
+ }
+ .outlinedsecondary{
+    @apply border-2 text-red-600 border-red-600 rounded-lg;
+ }
+
+ /*------ INPUT ---*/
+.standard{
+    @apply h-[3rem] left-0 pl-0 text-gray-700 ;
+}
+.standard-label{
+    @apply  left-0 top-2;
+}
+.filled{
+    @apply pt-4 rounded-t-lg bg-gray-200;
+}
+.filled-label{
+    @apply left-6 top-10 ;
+}
+.outlined-label{
+    @apply bg-white text-opacity-80 absolute left-5 top-6 px-1 transition duration-200;
+}
