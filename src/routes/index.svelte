@@ -8,6 +8,7 @@
 	import MenuItem from "$lib/ui/MenuItem.svelte";
 	import CheckBox from "$lib/ui/CheckBox.svelte";
 	import RadioGroup from "$lib/ui/RadioGroup.svelte";
+	import Datefield from "$lib/ui/DesktopDatePicker.svelte";
 	import "../style.css"
 </script>
 
@@ -116,21 +117,23 @@
 	<Paper>
 		<h1 class="mb-6 border-b-2 text-2xl">Select</h1>
 		<div class="mb-8">
-			<Select>
+			<Select placeholder="Select Standard" width="full">
+				<MenuItem value="2" label="Option 1"/>
+				<MenuItem value="3" label="Option 2"/>
+			</Select>
+			<Select variant="outlined" placeholder="Select Outlined" width="50">
 				<MenuItem value="1" label="Option 1"/>
 				<MenuItem value="2" label="Option 2"/>
 				<MenuItem value="3" label="Option 3"/>
 			</Select>
-			<Select variant="filled">
-				<MenuItem value="1" label="Option 1"/>
-				<MenuItem value="2" label="Option 2"/>
-				<MenuItem value="3" label="Option 3"/>
-			</Select>
-			<Select variant="outlined">
-				<MenuItem value="1" label="Option 1"/>
-				<MenuItem value="2" label="Option 2"/>
-				<MenuItem value="3" label="Option 3"/>
-			</Select>
+		</div>
+	</Paper>
+	<Paper>
+		<h1 class="mb-6 border-b-2 text-2xl">Datefield</h1>
+		<div class="mb-8">
+			<Datefield  placeholder="Date Desktop"/>
+			<Datefield placeholder="Outlined" variant="outlined"/>
+			
 		</div>
 	</Paper>
 </Container>

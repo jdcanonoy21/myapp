@@ -12,3 +12,4 @@
 
 
 <option {value} class='{variant}-label input-text transition duration-200 text-2xl font-medium text-gray-700 text-opacity-80 absolute'>{label}</option>  
+

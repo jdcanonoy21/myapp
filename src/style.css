@@ -13,10 +13,19 @@ body, html {
 }
 
 /*------ WIDTH ---*/
-.full{
+.wfull{
    @apply w-full;
 }
+.w75{
+   @apply w-9/12;
+}
 
+.w50{
+   @apply w-6/12;
+}
+.w25{
+   @apply w-3/12;
+}
 
 
 /*------ BUTTONS ---*/
@@ -24,7 +33,7 @@ body, html {
     @apply bg-gray-300 rounded-lg;
  }
  .containedprimary{
-    @apply text-white bg-blue-600 rounded-lg;
+    @apply text-white  bg-blue-600 rounded-lg;
  }
  .containedsecondary{
     @apply text-white bg-red-600 rounded-lg;
@@ -53,17 +62,26 @@ body, html {
 
  /*------ INPUT ---*/
 .standard{
-    @apply h-[3rem] left-0 pl-0 text-gray-700 ;
+    @apply h-[3rem] pl-0 text-gray-700;
 }
 .standard-label{
     @apply  left-0 top-2;
 }
 .filled{
-    @apply pt-4 rounded-t-lg bg-gray-200;
+    @apply h-[5rem] pt-4 pl-4 rounded-t-lg bg-gray-200;
 }
 .filled-label{
     @apply left-6 top-10 ;
 }
+.outlined{
+   @apply h-[5rem] pt-4 pl-4 rounded-t-lg;
+}
 .outlined-label{
     @apply bg-white text-opacity-80 absolute left-5 top-6 px-1 transition duration-200;
 }
+
+
+ /*------ SIZE ---*/
+ .small{
+   @apply w-6 h-6
+ }
