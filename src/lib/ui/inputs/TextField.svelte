@@ -1,47 +1,38 @@
 <script>
-    import { onMount } from 'svelte';
 	export let value;
 	export let placeholder = '';
 	export let disabled = false;
-    export let color='';
-    export let width='';
-    export let helperText='';
-    export let variant='';
+  export let color='';
+  export let width='';
+  export let helperText='';
+  export let variant='';
 	let clazz = '';
 	export { clazz as class };
 
-    let now = new Date(), month, day, year;
-	let dateString;
-	
-	onMount(()=> {
-        month = '' + (now.getMonth() + 1),
-        day = '' + now.getDate(),
-        year = now.getFullYear();
+	let inputRef;
 
-    if (month.length < 2) 
-        month = '0' + month;
-    if (day.length < 2) 
-        day = '0' + day;
+	export const focus = () => {
+		if (inputRef) inputRef.focus();
+	};
 
-    dateString = [year, month, day].join('-');
-	})
 
 
 </script>
 
 
 
-
-<div class="mb-4">
-  <div class="flex mx-4 ">
-    <div class="relative  {variant}">
-      <input type="date" placeholder="test" class="textField focus:outline-0 placeholder:text-transparent relative bg-transparent pt-2.5 pr-2.5 pb-2.5 pl-0 text-lg rounded-none border-b-[1px] border-gray-400 z-50"/>
+    <div class="relative {variant} my-2">
+      <input 
+        bind:this={inputRef}
+        bind:value
+        {disabled}
+        {placeholder}
+        type="text"
+        class="w-full textField focus:outline-0 placeholder:text-transparent relative bg-transparent pt-3 pr-2.5 pb-2.5 pl-0 text-sm rounded-none border-b-[1px] border-gray-400 z-50"/>
       <span class="text-field-highlight absolute h-3/5 top-1/4 left-0 pointer-events-none opacity-5"></span>
       <span class="text-field-bar relative block before:left-1/2 after:right-1/2"></span>
-      <label class="text-field-label text-lg font-medium absolute left-0 top-5">{placeholder}</label>
+      <label class="text-field-label text-sm font-normal absolute left-0 top-5">{placeholder}</label>
     </div>
-  </div>
-</div>
 
 
 
@@ -56,12 +47,12 @@ transition: 0.2s ease all;
 }
 .textField:focus ~ .text-field-label {
 color: #3f51b5;
-top: -12px;
+top: -10px;
 position: absolute ;
 font-size: 12px;
 }
 input:not(:placeholder-shown) ~ .text-field-label {
-top: -12px;
+top: -10px;
 font-size: 12px;
 }
 .text-field-bar:before, .text-field-bar:after {

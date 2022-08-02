@@ -30,7 +30,7 @@
 .fui-checkbox {
     z-index: 0;
     position: relative;
-    display: inline-block;
+    display: block;
     color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
     font-size: 16px;
     line-height: 1.5;

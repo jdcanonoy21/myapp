@@ -14,7 +14,7 @@
 </script>
 
 
-<label class="fui-radio mx-4">
+<label class="fui-radio my-4">
     <input 
     bind:value
     type="radio"
@@ -32,7 +32,7 @@
     .fui-radio {
     z-index: 0;
     position: relative;
-    display: inline-block;
+    display: block;
     color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
     font-size: 16px;
     line-height: 1.5;
